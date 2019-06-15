@@ -1,0 +1,45 @@
+npm install  react-router-dom —save
+
+
+Wrap <App/> Tag under 
+ReactDOM.render( <BrowserRouter><App/></BrowserRouter>,document.querySelector("#root"));
+
+Router Mapping on App Component
+
+<Switch>
+        <Route path="/" exact render={()=><h1>Home Page</h1>}/>
+        <Route path="/aboutus/:name/:descr" exact component={AboutUs}/>
+        <Route path="/shoes"  exact component={Shoes}/>
+        <Route path="/news" exact component={News}/>
+        <Redirect exact from="/new" to="/news"/>
+        <Switch>
+          <Route path="/shoes/casual” exact render={()=><h1>Casual Shoes</h1>}/>
+          <Route path="/shoes/sports/:price" exact component={SportShoes}/>
+        </Switch>
+        <Route render={()=><h1>NO PAGE EXIST </h1>}/>
+        
+        </Switch>
+
+Access Parameter in Component
+{props.match.params.myname}
+
+
+Access Query Parameter
+ const query = new URLSearchParams(props.location.search);
+    let value ="";
+    for (let param of query.entries()) {
+       value +=param;
+    }
+
+Nested Routes
+<div><h1>Shoes  {value} </h1>
+    <Link to="/shoes/casual">Casual Shoes</Link>&nbsp;&nbsp;
+    <NavLink to="/shoes/sports/12000">Sport Shoes</NavLink>
+     </div>
+
+
+
+ <li><NavLink activeClassName="active" to="/">Home</NavLink></li>
+                        <li><Link to={{pathname:'/shoes',hash:'#casual',search:'?price=9000&brand=Puma'}}>Shoes</Link></li>
+                        <li><NavLink to="/aboutus/Amit/Trainer">AboutUs</NavLink></li>
+                        <li><Link to="/news">News</Link></li>

@@ -1,0 +1,47 @@
+.hint{
+    background-color: blanchedalmond;
+    margin: 30px auto;
+    width: 40%;
+    
+}
+.hint ul{
+    list-style: none;
+}
+.hint ul li{
+    margin: 10px;
+    display: flex;
+}
+.hint ul li h6{
+    padding: 0 10px;    
+}
+
+
+
+
+.login {
+    text-align: center !important;
+    border: 2px solid black;
+    margin: auto;
+    width: 40%;
+    border-radius: 10px;    
+    background: linear-gradient(to right,#230d88, #574d92, #230d88) ;
+}
+
+.login ul{
+    list-style: none;
+    margin: 10px;
+}
+.login ul li{
+margin: 10px;
+}
+h4{
+    color: antiquewhite;
+}
+.login ul li h4{
+    color: aliceblue;
+}
+.login ul li input,h4{
+    block-size: 30px;
+    border-radius: 10px;
+    display: inline-block;
+}

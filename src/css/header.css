@@ -1,0 +1,22 @@
+.header{
+    background: rgb(32, 25, 25);
+}
+.header ul {
+    
+    display: flex;
+}
+.header ul li{
+    display: block;
+    margin: 10px;
+    font-size: 25px;
+    list-style: none;
+    font-style: normal;
+}
+.header ul li:hover{
+    background-color: rgb(92, 161, 221);
+    border-radius: 30%;
+}
+
+.header .logout{
+    float: right;
+}
